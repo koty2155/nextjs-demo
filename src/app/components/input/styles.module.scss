@@ -1,0 +1,30 @@
+@use '../../../styles/variables.scss' as *;
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.label {
+    color: $text-secondary-color;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    border: 1px solid #66666659;
+    outline: none;
+
+    &:focus-visible {
+        border: 1px solid $primary-color;
+    }
+
+    @media screen and (min-width: $screen-lg-min) {
+        font-size: 18px;
+    }
+}

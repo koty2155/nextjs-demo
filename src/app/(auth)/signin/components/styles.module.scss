@@ -1,0 +1,9 @@
+@use '../../../../styles/variables.scss' as *;
+
+.socialButtonsDivider {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-transform: uppercase;
+    align-items: center;
+}

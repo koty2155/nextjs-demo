@@ -1,0 +1,62 @@
+@use '../../../styles/variables.scss' as *;
+
+.signinBoxWrapper {
+    display: flex;
+    justify-content: center;
+    background-image: url('https://images.unsplash.com/photo-1617957848715-3a374699f8eb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    min-height: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+.signinBox {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 24px;
+    background-color: #fff;
+    gap: 20px;
+    max-width: 700px;
+    width: 100%;
+    align-self: center;
+
+    &__header {
+        text-align: center;
+        gap: 4px;
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+        gap: 40px;
+        padding: 40px 67px;
+    }
+
+    @media screen and (min-width: $screen-lg-min) {
+        gap: 40px;
+        padding: 40px 134px;
+    }
+}
+
+.signinForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    @media screen and (min-width: $screen-lg-min) {
+        gap: 24px;
+    }
+}
+
+.socialButtonsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    @media screen and (min-width: $screen-lg-min) {
+        gap: 16px;
+    }
+}

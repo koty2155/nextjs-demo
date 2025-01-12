@@ -1,0 +1,32 @@
+@use '../../../styles/variables.scss' as *;
+
+.button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 22px;
+
+    &--primary {
+        color: #fff;
+        background-color: $primary-color;
+        border-color: transparent;
+    }
+
+    &--outlined {
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    }
+
+    &__innerWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8;
+    }
+
+    @media screen and (min-width: $screen-lg-min) {
+        font-size: 18px;
+    }
+}
