@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${robotoFont.className}`}>{children}</body>
+            <body className={`${robotoFont.className}`}>
+                <div className="pageWrapper">{children}</div>
+            </body>
         </html>
     );
 }
