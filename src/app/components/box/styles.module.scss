@@ -1,0 +1,45 @@
+@use '../../../styles/variables.scss' as *;
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28 20;
+    border-radius: 48;
+    max-width: 600;
+    gap: 32;
+    color: white;
+    position: relative;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 63%, rgba(0, 0, 0, 0) 100%);
+
+    @media screen and (min-width: $screen-md-min) {
+        padding: 72 48;
+    }
+
+    &__title {
+        font-size: 32px;
+
+        @media screen and (min-width: $screen-lg-min) {
+            font-size: 42px;
+        }
+    }
+    
+    &__description {
+        font-size: 18px;
+
+        @media screen and (min-width: $screen-lg-min) {
+            font-size: 20px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        width: 100%;
+
+        @media screen and (min-width: $screen-md-min) {
+            width: 160px;
+        }
+    }
+}
