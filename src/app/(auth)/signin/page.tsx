@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import styles from './page.module.scss';
 import { Button } from '@/app/components/button/Button';
 import { Input } from '@/app/components/input/Input';
@@ -8,12 +9,12 @@ import { Facebook } from '@/app/components/icons/Facebook';
 import { Google } from '@/app/components/icons/Google';
 import { PasswordInput } from '@/app/components/input/password/PasswordInput';
 import { ButtonStyleType } from '@/app/components/button/types';
-import Link from 'next/link';
+import { Card } from '@/app/components/card/Card';
 
 export default function SignIn() {
     return (
-        <div className={styles.signinBox}>
-            <div className={styles.signinBox__header}>
+        <Card>
+            <div className={styles.signinFormHeader}>
                 <h1>Log in</h1>
                 <p>
                     Don&apos;t you have an account? <Link href="/signup">Sign up</Link>
@@ -37,6 +38,6 @@ export default function SignIn() {
                     Log in with Google
                 </Button>
             </div>
-        </div>
+        </Card>
     );
 }

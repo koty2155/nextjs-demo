@@ -1,0 +1,13 @@
+@use '../../../styles/variables.scss' as *;
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    @media screen and (min-width: $screen-lg-min) {
+        gap: 24px;
+    }
+}

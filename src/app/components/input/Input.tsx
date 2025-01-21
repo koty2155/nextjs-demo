@@ -3,9 +3,10 @@ import styles from './styles.module.scss';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     label?: string;
+    error?: string;
 }
 
-export const Input: FC<InputProps> = ({ label, type, id, ...props }) => {
+export const Input: FC<InputProps> = ({ label, type, id, error, ...props }) => {
     return (
         <div className={styles.inputWrapper}>
             {label && (
@@ -14,6 +15,8 @@ export const Input: FC<InputProps> = ({ label, type, id, ...props }) => {
                 </label>
             )}
             <input type={type} id={id} className={styles.input} {...props} />
+
+            {error && <p className={styles.error}>{error}</p>}
         </div>
     );
 };

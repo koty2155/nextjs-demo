@@ -7,9 +7,12 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     icon?: JSX.Element;
 }
 
-export const Button: FC<ButtonProps> = ({ children, styleType, icon, ...props }) => {
+export const Button: FC<ButtonProps> = ({ children, styleType, icon, disabled, ...props }) => {
     return (
-        <button className={`${styles.button} ${styles.button}--${styleType || ButtonStyleType.PRIMARY}`} {...props}>
+        <button
+            className={`${styles.button} ${styles.button}--${styleType || ButtonStyleType.PRIMARY} ${disabled ? `${styles.button}--disabled` : ''}`}
+            {...props}
+        >
             {icon ? (
                 <div className={`${styles.button}__innerWrapper`}>
                     {icon}
